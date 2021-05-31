@@ -1,3 +1,8 @@
+make_folders:
+	-v mkdir data
+	-v mkdir models
+	-v mkdir configs
+
 get_train:
 	wget https://raw.githubusercontent.com/ltgoslo/NorBERT/main/benchmarking/data/sentiment/no/train.csv -P ./data/
 

@@ -1,0 +1,14 @@
+{
+    "name": "test",
+    "folder": "./models/test/",
+    "log_folder": "./models/test/logs/",
+    "seed": 123,
+    "batch_size": 16,
+    "epochs": 5,
+    "lr": 4e-5,
+    "fine_tuning": "standard",
+    "bert_variant": "NbAiLab/nb-bert-base",
+    "train_path": "./data/train.csv",
+    "dev_path": "./data/dev.csv",
+    "checkpointing_enabled": true
+}
