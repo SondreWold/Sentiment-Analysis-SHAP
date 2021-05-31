@@ -69,7 +69,6 @@ def eval(device, test_loader, num_labels, tokenizer, path_to_model_folder, batch
             total_test_acc += acc.item()
             print("Batch accuracy: ",  acc.item())
             passes += 1
-            break
 
     print(f"Total accuracy on test test: {total_test_acc/passes}")
     print(classification_report(golds, guesses))
