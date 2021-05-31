@@ -8,6 +8,8 @@ Using Transformers + SHAP to illustrate document-level, binary sentiment analysi
 
 [SHAP](https://shap.readthedocs.io/en/latest/index.html)
 
+[Dataset used](https://github.com/ltgoslo/norec)
+
 ## Evaluation
 
 When trained on ~2400 samples for 5 epochs:
