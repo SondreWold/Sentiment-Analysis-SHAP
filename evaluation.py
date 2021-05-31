@@ -9,6 +9,7 @@ import tqdm
 from torch.utils.data import DataLoader
 from transformers import BertTokenizer
 from sklearn.metrics import classification_report
+import scipy as sp
 
 
 def multi_acc(y_pred, y_test):  # Taken from: https://github.com/dh1105/Sentence-Entailment
@@ -39,6 +40,7 @@ def eval(device, test_loader, num_labels, tokenizer, path_to_model_folder, batch
     passes = 0
     guesses = []
     golds = []
+
     with torch.no_grad():
         for i, batch in enumerate(tqdm.tqdm(test_loader)):
             doc, y = batch
@@ -67,6 +69,7 @@ def eval(device, test_loader, num_labels, tokenizer, path_to_model_folder, batch
             total_test_acc += acc.item()
             print("Batch accuracy: ",  acc.item())
             passes += 1
+            break
 
     print(f"Total accuracy on test test: {total_test_acc/passes}")
     print(classification_report(golds, guesses))
